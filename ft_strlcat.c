@@ -6,7 +6,7 @@
 /*   By: slazar <slazar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 00:25:44 by slazar            #+#    #+#             */
-/*   Updated: 2022/10/19 22:55:57 by slazar           ###   ########.fr       */
+/*   Updated: 2022/10/20 16:35:27 by slazar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 		return (0);
 	dst_len = ft_strlen(dst);
 	src_len = ft_strlen(src);
-
-	if(dstsize < dst_len)
+	if (dstsize < dst_len)
 		return (src_len + dstsize);
 	i = 0;
 	while ((i + dst_len + 1 < dstsize) && src[i])

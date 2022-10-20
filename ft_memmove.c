@@ -6,7 +6,7 @@
 /*   By: slazar <slazar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 18:57:07 by slazar            #+#    #+#             */
-/*   Updated: 2022/10/19 17:04:03 by slazar           ###   ########.fr       */
+/*   Updated: 2022/10/20 16:27:21 by slazar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,15 +21,10 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	dc = (unsigned char *) dst;
 	if (!cc && !dc)
 		return (0);
-	if (dc > cc)
+	if (cc < dc)
+		memcpy(dc, cc, len);
+	else if (cc > dc)
 	{
-    	while (len)
-    	{
-    		dc[len - 1] = cc[len - 1];
-    		len--;
-		}
-	}
-	else if (dc < cc)
 		while (len)
 		{
 			*dc = *cc;
@@ -37,5 +32,6 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 			cc++;
 			len--;
 		}
+	}
 	return (dst);
 }

@@ -6,7 +6,7 @@
 /*   By: slazar <slazar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 21:35:00 by slazar            #+#    #+#             */
-/*   Updated: 2022/10/19 17:13:58 by slazar           ###   ########.fr       */
+/*   Updated: 2022/10/20 17:22:59 by slazar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	size_t sl;
+	size_t	sl;
 
 	sl = ft_strlen(s);
 	while (sl + 1)

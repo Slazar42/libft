@@ -6,13 +6,13 @@
 /*   By: slazar <slazar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 15:13:45 by slazar            #+#    #+#             */
-/*   Updated: 2022/10/19 17:10:19 by slazar           ###   ########.fr       */
+/*   Updated: 2022/10/20 16:36:37 by slazar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-size_t 	ft_strlen(const char *s)
+size_t	ft_strlen(const char *s)
 {
 	size_t	l;
 

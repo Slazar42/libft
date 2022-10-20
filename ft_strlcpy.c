@@ -6,18 +6,18 @@
 /*   By: slazar <slazar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 18:36:17 by slazar            #+#    #+#             */
-/*   Updated: 2022/10/19 17:09:37 by slazar           ###   ########.fr       */
+/*   Updated: 2022/10/20 16:36:12 by slazar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src,size_t dstsize)
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	char	*c;
-	
+
 	c = (char *)src;
-	if(dstsize)
+	if (dstsize)
 	{
 		while (*c && (dstsize - 1))
 		{
