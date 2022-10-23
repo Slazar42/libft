@@ -6,7 +6,7 @@
 /*   By: slazar <slazar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 18:57:07 by slazar            #+#    #+#             */
-/*   Updated: 2022/10/20 16:27:21 by slazar           ###   ########.fr       */
+/*   Updated: 2022/10/23 23:41:46 by slazar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	if (!cc && !dc)
 		return (0);
 	if (cc < dc)
-		memcpy(dc, cc, len);
+		ft_memcpy(dc, cc, len);
 	else if (cc > dc)
 	{
 		while (len)

@@ -6,7 +6,7 @@
 /*   By: slazar <slazar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 13:50:59 by slazar            #+#    #+#             */
-/*   Updated: 2022/10/20 19:59:11 by slazar           ###   ########.fr       */
+/*   Updated: 2022/10/22 16:00:08 by slazar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,4 +23,5 @@ char	*ft_strchr(const char *s, int c)
 	if (*s == (unsigned char)c)
 		return ((char *)s);
 	return (NULL);
+
 }

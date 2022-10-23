@@ -6,7 +6,7 @@
 /*   By: slazar <slazar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 19:42:33 by slazar            #+#    #+#             */
-/*   Updated: 2022/10/20 20:04:31 by slazar           ###   ########.fr       */
+/*   Updated: 2022/10/22 16:00:37 by slazar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,18 @@
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int i;
+	size_t		start;
+	size_t		len;
 
-	i = 0;
+	start = 0;
+	if (!*set)
+		return (ft_strdup(s1));
+	if (!*s1)
+		return (ft_strdup(""));
+	while (s1[start] && ft_strchr(set, s1[start]))
+		start++;
+	len = ft_strlen(s1);
+	while (len > start && ft_strchr(set, s1[len]))
+		len--;
+	return (ft_substr(s1, start, len - start + 1));
 }
