@@ -1,34 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: slazar <slazar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/24 20:41:09 by slazar            #+#    #+#             */
-/*   Updated: 2022/10/25 13:42:24 by slazar           ###   ########.fr       */
+/*   Created: 2022/10/25 13:46:56 by slazar            #+#    #+#             */
+/*   Updated: 2022/10/25 18:24:47 by slazar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+int word(char const *s, char c)
 {
-	if ( n == -2147483648)
+	int i;
+	int count;
+	while (s[i])
 	{
-		ft_putstr_fd("-2147483648", fd);
-		return;
+		while (s[i] && s[i] == c)
+			i++;
+		if (s[i])
+			count++;
+		while (s[i] && s[i] != c)
+			i++;
 	}
-	if (n < 0)
-	{
-		ft_putchar_fd('-', fd);
-		n = -n ;
-	}
-	if(n <= 9 && n >= 0)
-		ft_putchar_fd(((n % 10) + '0'), fd);
-	if (n >= 10)
-	{
-		ft_putnbr_fd((n / 10), fd);
-		ft_putnbr_fd((n % 10), fd);
-	}
+	return (count);
 }
+
+
+
+
+
+
+int main()
+	{
+		int a = word("aasalahaaasdsdsdsdaadoaa", 'a');
+		printf("%d",a);
+	}
