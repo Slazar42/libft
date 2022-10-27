@@ -1,35 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_split.c                                         :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: slazar <slazar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/25 13:46:56 by slazar            #+#    #+#             */
-/*   Updated: 2022/10/26 22:25:30 by slazar           ###   ########.fr       */
+/*   Created: 2022/10/26 22:14:34 by slazar            #+#    #+#             */
+/*   Updated: 2022/10/26 22:37:10 by slazar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// int word(char const *s, char c)
-// {
-// 	int i;
-// 	int count;
-// 	while (s[i])
-// 	{
-// 		while (s[i] && s[i] == c)
-// 			i++;
-// 		if (s[i])
-// 			count++;
-// 		while (s[i] && s[i] != c)
-// 			i++;
-// 	}
-// 	return (count);
-// }
+t_list	*ft_lstnew(void *content)
+{
+	t_list	*ptr ;
 
-// int main()
-// 	{
-// 		int a = word("aasalahaaasdsdsdsdaadoaa", 'a');
-// 		printf("%d",a);
-// 	}
+	ptr = malloc(sizeof(t_list));
+	if (!ptr)
+		return (0);
+	ptr->content = content;
+	ptr->next = NULL;
+	return (ptr);
+}
