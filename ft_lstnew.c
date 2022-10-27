@@ -6,7 +6,7 @@
 /*   By: slazar <slazar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 22:14:34 by slazar            #+#    #+#             */
-/*   Updated: 2022/10/26 22:37:10 by slazar           ###   ########.fr       */
+/*   Updated: 2022/10/27 16:24:17 by slazar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ t_list	*ft_lstnew(void *content)
 {
 	t_list	*ptr ;
 
-	ptr = malloc(sizeof(t_list));
+	ptr = (t_list *) malloc(sizeof(t_list));
 	if (!ptr)
 		return (0);
 	ptr->content = content;

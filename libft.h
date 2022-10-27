@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   libft.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: slazar <slazar@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/27 16:43:14 by slazar            #+#    #+#             */
+/*   Updated: 2022/10/27 20:48:21 by slazar           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef LIBFT_H
 # define LIBFT_H
 
@@ -6,11 +18,10 @@
 #include <unistd.h>
 #include <stdlib.h>
 
-typedef struct s_list
-{
-void			*content;
-struct s_list	*next;
-} 				t_list;
+typedef struct s_list{
+	void			*content;
+	struct s_list	*next;
+}	t_list;
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -48,4 +59,5 @@ void	ft_putnbr_fd(int n, int fd);
 // char	**ft_split(char const *s, char c);
 t_list	*ft_lstnew(void *content);
 void	ft_lstadd_front(t_list **lst, t_list *new);
+int	ft_lstsize(t_list *lst);
 #endif
