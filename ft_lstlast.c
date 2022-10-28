@@ -1,38 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_split.c                                         :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: slazar <slazar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/25 13:46:56 by slazar            #+#    #+#             */
-/*   Updated: 2022/10/28 04:20:57 by slazar           ###   ########.fr       */
+/*   Created: 2022/10/27 22:11:43 by slazar            #+#    #+#             */
+/*   Updated: 2022/10/27 22:22:07 by slazar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int word(char const *s, char c)
+t_list	*ft_lstlast(t_list *lst)
 {
-	int i;
-	int count;
-	while (s[i])
+	while(lst)
 	{
-		while (s[i] && s[i] == c)
-			i++;
-		if (s[i])
-			count++;
-		while (s[i] && s[i] != c)
-			i++;
+		if (lst->next == NULL)
+			return(lst);
+		lst = lst->next;
 	}
-	return (count);
+	return (0);
 }
-char **ft_split(char const *s, char c)
-{
-	
-}
-int main()
-	{
-		int a = word("aasalahaaasdsdsdsdaadoaa", 'a');
-		printf("%d",a);
-	}

@@ -1,38 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_split.c                                         :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: slazar <slazar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/25 13:46:56 by slazar            #+#    #+#             */
-/*   Updated: 2022/10/28 04:20:57 by slazar           ###   ########.fr       */
+/*   Created: 2022/10/28 03:41:24 by slazar            #+#    #+#             */
+/*   Updated: 2022/10/28 04:06:04 by slazar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int word(char const *s, char c)
+void	ft_lstclear(t_list **lst, void (*del)(void	*))
 {
-	int i;
-	int count;
-	while (s[i])
+	t_list *ptr;
+	if(!lst || !del)
+		return;
+	while(*lst)
 	{
-		while (s[i] && s[i] == c)
-			i++;
-		if (s[i])
-			count++;
-		while (s[i] && s[i] != c)
-			i++;
+		ptr = ((*lst) -> next);
+		ft_lstdelone(*lst, del);
+		(*lst) = ptr; 
 	}
-	return (count);
 }
-char **ft_split(char const *s, char c)
-{
-	
-}
-int main()
-	{
-		int a = word("aasalahaaasdsdsdsdaadoaa", 'a');
-		printf("%d",a);
-	}
