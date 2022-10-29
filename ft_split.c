@@ -6,7 +6,7 @@
 /*   By: slazar <slazar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 13:46:56 by slazar            #+#    #+#             */
-/*   Updated: 2022/10/28 04:20:57 by slazar           ###   ########.fr       */
+/*   Updated: 2022/10/28 19:14:49 by slazar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,10 @@ int word(char const *s, char c)
 	}
 	return (count);
 }
-char **ft_split(char const *s, char c)
-{
+// char **ft_split(char const *s, char c)
+// {
 	
-}
+// }
 int main()
 	{
 		int a = word("aasalahaaasdsdsdsdaadoaa", 'a');

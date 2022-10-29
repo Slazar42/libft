@@ -6,16 +6,16 @@
 /*   By: slazar <slazar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 22:24:39 by slazar            #+#    #+#             */
-/*   Updated: 2022/10/28 02:26:44 by slazar           ###   ########.fr       */
+/*   Updated: 2022/10/29 03:49:49 by slazar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstadd_back(t_list **lst, t_list *new)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	if(*lst)
-	ft_lstlast(*lst)->next = new;
+		ft_lstlast(*lst)->next = new;
 	else
 		*lst = new;
 }
