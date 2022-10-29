@@ -6,7 +6,7 @@
 /*   By: slazar <slazar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 22:11:43 by slazar            #+#    #+#             */
-/*   Updated: 2022/10/27 22:22:07 by slazar           ###   ########.fr       */
+/*   Updated: 2022/10/29 06:51:27 by slazar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	while(lst)
+	while (lst)
 	{
 		if (lst->next == NULL)
-			return(lst);
+			return (lst);
 		lst = lst->next;
 	}
 	return (0);

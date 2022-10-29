@@ -6,16 +6,17 @@
 /*   By: slazar <slazar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 13:46:56 by slazar            #+#    #+#             */
-/*   Updated: 2022/10/28 19:14:49 by slazar           ###   ########.fr       */
+/*   Updated: 2022/10/29 06:41:51 by slazar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int word(char const *s, char c)
+int	word(char const *s, char c)
 {
-	int i;
-	int count;
+	int	i;
+	int	count;
+
 	while (s[i])
 	{
 		while (s[i] && s[i] == c)
@@ -29,10 +30,9 @@ int word(char const *s, char c)
 }
 // char **ft_split(char const *s, char c)
 // {
-	
 // }
-int main()
-	{
-		int a = word("aasalahaaasdsdsdsdaadoaa", 'a');
-		printf("%d",a);
-	}
+// int main()
+// 	{
+// 		int a = word("aasalahaaasdsdsdsdaadoaa", 'a');
+// 		printf("%d",a);
+// 	}

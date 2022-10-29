@@ -6,7 +6,7 @@
 /*   By: slazar <slazar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 17:27:10 by slazar            #+#    #+#             */
-/*   Updated: 2022/10/24 00:02:47 by slazar           ###   ########.fr       */
+/*   Updated: 2022/10/29 06:49:04 by slazar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	unsigned char *sbs;
-	size_t i;
+	unsigned char	*sbs;
+	size_t			i;
 
 	if (start >= ft_strlen(s))
 		return (ft_strdup(""));

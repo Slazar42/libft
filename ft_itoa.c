@@ -6,7 +6,7 @@
 /*   By: slazar <slazar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/23 14:22:13 by slazar            #+#    #+#             */
-/*   Updated: 2022/10/23 19:15:29 by slazar           ###   ########.fr       */
+/*   Updated: 2022/10/29 06:38:37 by slazar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,17 @@
 
 static	int	count_numbers(int n)
 {
-	int c;
-	
+	int	c;
+
 	c = 0;
-	if(n < 0)
+	if (n < 0)
 		c = 1;
 	while (n)
 	{
 		n = n / 10;
-		c++; 
-	}	return (c);
+		c++;
+	}
+	return (c);
 }
 
 char	*ft_itoa(int n)

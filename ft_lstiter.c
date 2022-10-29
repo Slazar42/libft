@@ -6,7 +6,7 @@
 /*   By: slazar <slazar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 04:10:33 by slazar            #+#    #+#             */
-/*   Updated: 2022/10/29 03:19:00 by slazar           ###   ########.fr       */
+/*   Updated: 2022/10/29 06:45:40 by slazar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	while(lst)
+	while (lst)
 	{
 		f(lst->content);
 		lst = lst->next;

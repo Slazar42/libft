@@ -6,7 +6,7 @@
 /*   By: slazar <slazar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/23 20:23:44 by slazar            #+#    #+#             */
-/*   Updated: 2022/10/24 20:30:29 by slazar           ###   ########.fr       */
+/*   Updated: 2022/10/29 06:46:40 by slazar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 	int		i;
 
 	if (!s || !f)
-		return;
+		return ;
 	i = 0;
 	while (s[i])
 	{
-		f(i,&s[i]);
+		f(i, &s[i]);
 		i++;
 	}
 }
