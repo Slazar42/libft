@@ -1,8 +1,20 @@
-NAME 			= libft.a
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: slazar <slazar@student.42.fr>              +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2022/10/30 05:34:23 by slazar            #+#    #+#              #
+#    Updated: 2022/10/30 05:34:24 by slazar           ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+NAME 		= libft.a
 CFLAGS 		= -Wall -Wextra -Werror
-CC 				= gcc
-AR 				= ar rcs
-RM 				= rm -f
+CC 		= gcc
+AR 		= ar rcs
+RM 		= rm -f
 
 SRCS=   ft_atoi.c\
         ft_bzero.c\
