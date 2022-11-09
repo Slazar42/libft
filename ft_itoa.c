@@ -6,7 +6,7 @@
 /*   By: slazar <slazar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/23 14:22:13 by slazar            #+#    #+#             */
-/*   Updated: 2022/10/29 06:38:37 by slazar           ###   ########.fr       */
+/*   Updated: 2022/10/30 12:55:42 by slazar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ char	*ft_itoa(int n)
 	if (n == 0)
 		return (ft_strdup("0"));
 	c = count_numbers(n) + 1;
-	str = (char *)malloc (c);
+	str = (char *)malloc(c);
 	if (!str)
 		return (NULL);
 	if (n < 0)

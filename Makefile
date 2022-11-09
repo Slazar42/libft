@@ -1,20 +1,8 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: slazar <slazar@student.42.fr>              +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/10/30 05:34:23 by slazar            #+#    #+#              #
-#    Updated: 2022/10/30 05:34:24 by slazar           ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
 NAME 		= libft.a
 CFLAGS 		= -Wall -Wextra -Werror
 CC 		= gcc
-AR 		= ar rcs
 RM 		= rm -f
+AR              = ar rcs
 
 SRCS=   ft_atoi.c\
         ft_bzero.c\
@@ -80,7 +68,7 @@ fclean:	clean
 
 re:	fclean all
 
-bonus:	${name}	${B_OBJ}
+bonus:	${NAME}	${B_OBJ}
 	${AR} ${NAME} ${B_OBJ}
 
-.PHONY:	all clean fclean re bonus
+.PHONY = all re fclean clean bonus

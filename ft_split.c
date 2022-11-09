@@ -6,13 +6,13 @@
 /*   By: slazar <slazar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 13:46:56 by slazar            #+#    #+#             */
-/*   Updated: 2022/10/30 03:43:37 by slazar           ###   ########.fr       */
+/*   Updated: 2022/10/30 12:52:00 by slazar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	word(char const *s, char c)
+static int	word(char const *s, char c)
 {
 	int	i;
 	int	count;
@@ -31,7 +31,7 @@ int	word(char const *s, char c)
 	return (count);
 }
 
-int	len_word(const char *s, char c, int i)
+static int	len_word(const char *s, char c, int i)
 {
 	int	len_s;
 
